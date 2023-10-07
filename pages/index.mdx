@@ -1,11 +1,45 @@
-# Introduction
- 
-Welcome to Nextra! This is a basic docs template. You can use it as a starting point for your own project :)
+# flow
 
-## What is Nextra?
+flow は、「流れ」のプログラミング言語による表現です。
 
-A **simple**, **powerful** and **flexible** site generation framework with everything you love from Next.js.
+Vue.js のリアクティブシステムや Kotlin のデータフロー、また Haskell のモナドやアロー、Verilog などの HDL 言語、Nintendo Switch「ナビつき! つくってわかる はじめてゲームプログラミング」、Factorio というゲームに影響を受け、これらの対象に共通してみられる「流れ」の概念を取り出して、なるべくシンプルな形で表そうとしました。
 
-## Documentation
+## 例
 
-The documentation is available at [https://nextra.site](https://nextra.site).
+flow のプログラムの構文は単純です。以下の例の詳細な説明は後ほど行うので、まずは flow の概念を感じ取ってください。
+
+```
+> 1 + 2 -> output
+3
+3
+3
+```
+
+```
+> @a'0 -> trace -> + 1 -> @a
+0
+1
+2
+3
+```
+
+```
+> if (blink == 0) (then:-> 2 ->) (else:-> 3 ->) merge -> output
+2
+3
+2
+3
+```
+
+```
+> copy 2 (-> * 2 ->) (-> + 1 ->) tuple -> output
+(4, 3)
+```
+
+```
+> [1, 2, 3] -> map -> * 2 -> unmap
+```
+
+## インストール
+
+flow は Haskell で開発され、WebAssembly のバイナリとして配布されています。そのため、このブラウザ上で試すことができます。また、wasmtime などのランタイムを用いて、ローカルで実行することもできます。
