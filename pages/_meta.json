@@ -1,7 +1,6 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "syntax": "構文",
   "about": {
     "title": "About",
     "type": "page"
