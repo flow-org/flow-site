@@ -43,4 +43,14 @@ flow のプログラムの構文は単純です。以下の例の詳細な説明
 
 ## インストール
 
-flow は Haskell で開発され、WebAssembly のバイナリとして配布されています。そのため、このブラウザ上でも試すことができます。また、wasmtime などのランタイムを用いて、ローカルで実行することもできます。
+flow は Haskell で開発され、WebAssembly のバイナリとして配布されています。そのため、このブラウザ上でも試すことができます。ブラウザ上で試すには、以下の URL にアクセスしてください。
+
+https://playflow.vercel.app
+
+また、 [wasmtime](https://wasmtime.dev/) などのランタイムを用いて、ローカルで実行することもできます。 [GitHub のリリース](https://github.com/flow-org/flow/releases) から、最新版の flow をダウンロードしてください。
+
+次のようにして実行できます。
+
+```
+$ wasmtime flow-lang.wasm
+```

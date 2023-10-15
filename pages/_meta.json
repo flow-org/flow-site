@@ -3,14 +3,15 @@
   "syntax": "構文",
   "reference": "リファレンス",
   "plan": "flow の今後",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
-  "contact": {
-    "title": "Contact ↗",
+  "try": {
+    "title": "flow を試す ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://playflow.vercel.app",
     "newWindow": true
+  },
+  "install": {
+    "title": "インストール",
+    "type": "page",
+    "href": "/#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB"
   }
 }
