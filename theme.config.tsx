@@ -1,5 +1,6 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import { useRouter } from 'next/router';
 
 const config: DocsThemeConfig = {
   logo: <span>flow</span>,
@@ -15,7 +16,18 @@ const config: DocsThemeConfig = {
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="flow" />
     <meta name="twitter:description" content='flow is a representation of "flow concept" using programming language.' />
-  </>)
+  </>),
+  useNextSeoProps() {
+    const { asPath } = useRouter()
+    if (asPath === '/') {
+      return {
+        title: 'flow - a representation of "flow concept" using programming language'
+      };
+    }
+    return {
+      titleTemplate: '%s - flow'
+    };
+  }
 }
 
 export default config
